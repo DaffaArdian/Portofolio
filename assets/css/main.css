@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  height: 10000px;
+}
+
+/* HERO CAROUSEL */
+.hero-carousel {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(30%);
+}
+
+.name {
+  position: absolute;
+  font-size: 25px;
+  text-align: center;
+  left: auto;
+  right: 70px;
+  bottom: 520px;
+  color: #fff;
+}
+
+.links-to {
+  position: absolute;
+  font-size: 22px;
+  width: 100px;
+  color: #fff;
+  bottom: 420px;
+  right: 240px;
+}
+.links-to ul {
+  display: flex;
+}
+
+.links-to ul li {
+  padding: 10px;
+  margin-left: 10px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 50%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+.hero-caption {
+  position: absolute;
+  bottom: 500px;
+  right: 72px;
+  color: #fff;
+}
+
+.hero-caption h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-caption p {
+  font-size: 18px;
+}
+/* AKHIR_HERO CAROUSEL */
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 767.98px) {
+  .name {
+    left: -800px;
+    bottom: 400px;
+  }
+  .hero-caption {
+    left: 98px;
+    bottom: 380px;
+  }
+  .links-to {
+    left: 80px;
+    bottom: 300px;
+  }
+  /* NAVBAR */
+  .hide-navbar {
+    display: none;
+  }
+  .navbar {
+    position: fixed;
+    top: -60px; /* sembunyikan navbar di atas */
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: top 0.3s ease; /* tambahkan efek transisi */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.8px);
+    -webkit-backdrop-filter: blur(1.8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar li {
+    margin: 0 10px;
+    list-style: none;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white; /* ganti warna teks dengan warna yang Anda inginkan */
+    transition: all 0.3s ease;
+  }
+
+  .navbar a:hover {
+    color: #f00; /* ganti warna teks saat dihover dengan warna yang Anda inginkan */
+  }
+  /* AKHIR_NAVBAR */
+  /* ABOUT */
+  .about {
+    display: flex;
+  }
+  /* AKHIR-ABOUT */
+}
+/* applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .navbar {
+    display: none;
+  }
+  .hide-navbar {
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    z-index: 100;
+  }
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .text-name {
+    display: none;
+  }
+}
+/* ABOUT */
+.main {
+  padding: 5%;
+  background-color: #000;
+}
+.about {
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+.about-text {
+  width: 100%;
+}
+.about-text h1 {
+  color: rgb(38, 150, 38);
+}
+.about img {
+  width: 400px;
+}
+.section-title {
+  position: relative;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.section-title__text {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.section-title__decoration {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  width: 150px;
+  height: 3px;
+  background-color: rgb(38, 150, 38);
+  transform: translateY(-50%);
+}
+/* AKHIR_ABOUT */
+
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 20px 0 20px 0;
+  line-height: 1px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #4ceb95;
+  margin: 4px 10px;
+}
